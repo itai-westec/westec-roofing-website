@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | WesTec Roofing Los Angeles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo-nav.png" alt="WesTec Roofing">
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="residential.html">Services</a>
+        <div class="dropdown-menu">
+          <a href="residential.html">Residential</a>
+          <a href="commercial.html">Commercial</a>
+        </div>
+      </div>
+      <a href="tesla-solar.html">Tesla Solar Roof</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html" class="nav-cta">Free Estimate</a>
+    </div>
+    <div class="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <h1>Get Your <em>Free Estimate</em></h1>
+      <p>Contact our team to schedule a consultation</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section style="padding: 5rem 3rem; background: var(--white);">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+      <!-- Form -->
+      <div>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Property Address</label>
+            <input type="text" id="address" name="address" required>
+          </div>
+          <div class="form-group">
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service...</option>
+              <option value="residential">Residential Roofing</option>
+              <option value="commercial">Commercial Roofing</option>
+              <option value="tesla">Tesla Solar Roof</option>
+              <option value="repair">Roof Repair</option>
+              <option value="emergency">Emergency Tarping</option>
+              <option value="gutter">Gutter Services</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" placeholder="Tell us about your roofing project..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Submit Estimate Request</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h2 style="font-family: var(--serif); color: var(--primary); margin-bottom: 2rem; font-size: 1.8rem; font-weight: 400;">Contact Information</h2>
+
+        <div style="margin-bottom: 2.5rem;">
+          <h3 style="font-family: var(--serif); color: var(--primary); font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 400;">Phone</h3>
+          <a href="tel:+13105551234" style="color: var(--accent); text-decoration: none; font-size: 1.1rem;">(310) 555-1234</a>
+          <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.3rem;">Available 24/7 for emergency calls</p>
+        </div>
+
+        <div style="margin-bottom: 2.5rem;">
+          <h3 style="font-family: var(--serif); color: var(--primary); font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 400;">Email</h3>
+          <a href="mailto:info@westecroofing.com" style="color: var(--accent); text-decoration: none; font-size: 1.1rem;">info@westecroofing.com</a>
+          <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.3rem;">We'll respond within 2 hours</p>
+        </div>
+
+        <div style="margin-bottom: 2.5rem;">
+          <h3 style="font-family: var(--serif); color: var(--primary); font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 400;">Office Location</h3>
+          <p style="color: var(--text-light); font-size: 1rem; line-height: 1.6;">
+            Los Angeles, CA<br>
+            Serving all of Greater Los Angeles<br>
+            License #XXXXXXX
+          </p>
+        </div>
+
+        <div style="padding: 2rem; background: var(--off-white); border-radius: 8px;">
+          <h3 style="font-family: var(--serif); color: var(--primary); font-size: 1.1rem; margin-bottom: 1rem; font-weight: 400;">Service Hours</h3>
+          <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 0.5rem;">Monday - Friday: 8:00 AM - 6:00 PM</p>
+          <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 0.5rem;">Saturday: 9:00 AM - 4:00 PM</p>
+          <p style="color: var(--text-light); font-size: 0.95rem;">Emergency Services: 24/7</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <h2>Ready to Get Started?</h2>
+    <p>Call us today for your free roofing estimate</p>
+    <a href="tel:+13105551234" class="cta-phone">(310) 555-1234</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="images/logo-footer.png" alt="WesTec Roofing">
+        <p>Premium roofing contractor serving Los Angeles. Backed by 30+ years of construction expertise through WesTec Construction. Licensed, bonded, and insured.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="residential.html">Shingle Roofing</a>
+        <a href="residential.html">Tile Roofing</a>
+        <a href="residential.html">Standing Seam</a>
+        <a href="residential.html">Flat Roof (TPO/PVC)</a>
+        <a href="residential.html">Slate Roofing</a>
+        <a href="tesla-solar.html">Tesla Solar Roof</a>
+        <a href="residential.html">Emergency Tarping</a>
+        <a href="residential.html">Gutter Services</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Our Portfolio</a>
+        <a href="areas.html">Service Areas</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+13105551234">(310) 555-1234</a>
+        <a href="mailto:info@westecroofing.com">info@westecroofing.com</a>
+        <a href="#">Los Angeles, CA</a>
+        <a href="#">License #XXXXXXX</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 WesTec Roofing. All rights reserved.</p>
+      <p>A division of WesTec Construction</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
