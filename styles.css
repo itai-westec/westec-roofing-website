@@ -621,3 +621,16 @@ footer {
   .about-services-grid { grid-template-columns: 1fr; }
   .about-stats-row { gap: 1.5rem; }
 }
+
+/* ===== LARGE SCREENS (1440px+) ===== */
+@media (min-width: 1440px) {
+  nav,
+  nav.scrolled {
+    padding-left: max(3rem, calc((100vw - 1400px) / 2));
+    padding-right: max(3rem, calc((100vw - 1400px) / 2));
+  }
+  .hero {
+    padding-left: max(3rem, calc((100vw - 1400px) / 2));
+    padding-right: max(3rem, calc((100vw - 1400px) / 2));
+  }
+}
