@@ -350,6 +350,28 @@ footer {
 }
 .service-detail a:hover { opacity: 0.8; }
 
+/* Service Pair (2-column cards without images) */
+.service-pair {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+  max-width: 1200px; margin: 0 auto; padding: 4rem 3rem;
+}
+.service-pair-card {
+  background: var(--white); padding: 2.5rem;
+  border: 1px solid var(--light-gray); border-radius: 8px;
+}
+.service-pair-card h2 {
+  font-family: var(--serif); font-size: 2rem; color: var(--primary);
+  margin-bottom: 1.5rem; font-weight: 400; line-height: 1.2;
+}
+.service-pair-card p {
+  color: var(--text-light); font-size: 1rem; line-height: 1.8; margin-bottom: 1rem;
+}
+.service-pair-card a {
+  display: inline-block; margin-top: 1rem; color: var(--accent);
+  text-decoration: none; font-weight: 600; transition: opacity 0.3s;
+}
+.service-pair-card a:hover { opacity: 0.8; }
+
 /* Contact Form */
 .contact-form {
   background: var(--off-white); padding: 2.5rem; border-radius: 8px;
@@ -507,4 +529,5 @@ footer {
   .faq-section { padding: 3rem 1.5rem; }
   .dropdown-menu { left: -50px; }
   .blog-grid { grid-template-columns: 1fr; }
+  .service-pair { grid-template-columns: 1fr; padding: 3rem 1.5rem; }
 }
