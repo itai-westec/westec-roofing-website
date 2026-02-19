@@ -517,6 +517,84 @@ footer {
 }
 .blog-back-link:hover { opacity: 0.7; }
 
+/* ===== ABOUT PAGE ===== */
+.about-intro {
+  padding: 5rem 3rem 3rem; background: var(--white);
+}
+.about-intro-content {
+  max-width: 800px; margin: 0 auto; text-align: center;
+}
+.about-intro-content p {
+  font-size: 1.25rem; line-height: 1.9; color: var(--text);
+  font-family: var(--serif); font-weight: 400;
+}
+.about-stats {
+  padding: 4rem 3rem; background: var(--off-white);
+}
+.about-stats-row {
+  display: flex; justify-content: center; gap: 4rem;
+  max-width: 900px; margin: 0 auto;
+}
+.about-stat { text-align: center; }
+.about-stat h3 {
+  font-family: var(--serif); font-size: 2.5rem; color: var(--accent);
+  font-weight: 400; line-height: 1;
+}
+.about-stat p {
+  font-size: 0.75rem; color: var(--text-light); letter-spacing: 1.5px;
+  text-transform: uppercase; margin-top: 0.5rem;
+}
+.about-way {
+  padding: 7rem 3rem; background: var(--primary);
+  position: relative; overflow: hidden;
+}
+.about-way::before {
+  content: ''; position: absolute; top: -50%; right: -10%; width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(197,165,90,0.08), transparent 70%);
+  border-radius: 50%;
+}
+.about-way-content {
+  max-width: 900px; margin: 0 auto; position: relative; z-index: 2;
+  text-align: center;
+}
+.about-way-content h2 {
+  font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--white); line-height: 1.2; margin-bottom: 1.5rem; font-weight: 400;
+}
+.about-way-content h2 em { color: var(--accent); font-style: italic; }
+.about-way-content > p {
+  color: rgba(255,255,255,0.7); line-height: 1.8; font-size: 0.95rem;
+  max-width: 700px; margin: 0 auto;
+}
+.about-way-cards {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  margin-top: 3rem;
+}
+.about-story {
+  padding: 5rem 3rem; background: var(--white);
+}
+.about-story-content {
+  max-width: 800px; margin: 0 auto;
+}
+.about-story-content h2 {
+  font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--primary); line-height: 1.2; margin-bottom: 2rem; font-weight: 400;
+}
+.about-story-content h2 em { color: var(--accent); font-style: italic; }
+.about-story-content p {
+  font-size: 1.05rem; line-height: 1.9; color: var(--text); margin-bottom: 1.5rem;
+}
+.about-services {
+  padding: 7rem 3rem; background: var(--off-white);
+}
+.about-services-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem; max-width: 1200px; margin: 0 auto;
+}
+.about-services-grid .service-card {
+  text-decoration: none; display: block; cursor: pointer;
+}
+
 /* Additional Responsive Rules */
 @media (max-width: 768px) {
   .service-detail { grid-template-columns: 1fr; padding: 3rem 1.5rem; }
@@ -530,4 +608,16 @@ footer {
   .dropdown-menu { left: -50px; }
   .blog-grid { grid-template-columns: 1fr; }
   .service-pair { grid-template-columns: 1fr; padding: 3rem 1.5rem; }
+  .about-stats-row { gap: 2rem; flex-wrap: wrap; }
+  .about-stat h3 { font-size: 2rem; }
+  .about-way { padding: 4rem 1.5rem; }
+  .about-way-cards { grid-template-columns: 1fr; }
+  .about-intro, .about-story { padding: 3rem 1.5rem; }
+  .about-stats { padding: 3rem 1.5rem; }
+  .about-services { padding: 4rem 1.5rem; }
+  .about-services-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .about-services-grid { grid-template-columns: 1fr; }
+  .about-stats-row { gap: 1.5rem; }
 }
