@@ -60,6 +60,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// Phone number auto-formatting (XXX) XXX-XXXX
+document.addEventListener('DOMContentLoaded', () => {
+  const phoneInput = document.getElementById('phone');
+  if (phoneInput) {
+    phoneInput.addEventListener('input', (e) => {
+      const digits = e.target.value.replace(/\D/g, '').substring(0, 10);
+      let formatted = '';
+      if (digits.length > 0) formatted = '(' + digits.substring(0, 3);
+      if (digits.length >= 3) formatted += ') ';
+      if (digits.length > 3) formatted += digits.substring(3, 6);
+      if (digits.length >= 6) formatted += '-' + digits.substring(6);
+      e.target.value = formatted;
+    });
+  }
+});
+
 // FAQ accordion
 document.addEventListener('DOMContentLoaded', () => {
   const faqItems = document.querySelectorAll('.faq-item');
