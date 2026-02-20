@@ -76,6 +76,38 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// Contact form AJAX submission with redirect
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.querySelector('.contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const submitBtn = form.querySelector('.form-submit');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          window.location.href = 'thank-you.html';
+        } else {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit Estimate Request';
+          alert('Something went wrong. Please try again or call us at (323) 250-3883.');
+        }
+      }).catch(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Estimate Request';
+        alert('Something went wrong. Please try again or call us at (323) 250-3883.');
+      });
+    });
+  }
+});
+
 // FAQ accordion
 document.addEventListener('DOMContentLoaded', () => {
   const faqItems = document.querySelectorAll('.faq-item');
