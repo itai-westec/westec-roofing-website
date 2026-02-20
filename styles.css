@@ -241,7 +241,7 @@ footer {
   max-width: 1200px; margin: 0 auto;
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
 }
-.footer-brand img { height: 60px; filter: brightness(0) invert(1); margin-bottom: 1rem; }
+.footer-brand img { height: 60px; width: auto; filter: brightness(0) invert(1); margin-bottom: 1rem; }
 .footer-brand p { color: rgba(255,255,255,0.5); font-size: 0.85rem; line-height: 1.7; max-width: 300px; }
 .footer-col h4 { color: var(--accent); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.2rem; }
 .footer-col a { display: block; color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.6rem; transition: color 0.3s; }
