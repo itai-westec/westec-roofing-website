@@ -44,6 +44,7 @@ This is the WesTec Roofing website — a premium roofing contractor site serving
 6. Service detail blocks on residential.html alternate layout using direction: rtl on even children
 7. Keep styles.css as ONE file and main.js as ONE file — do not split them
 8. When adding new content, match the EXACT patterns and class names already in the codebase
+9. When making changes, only edit the specific files and sections related to the task. Do not modify any other sections or files. Before committing, always show a summary of every file and section you changed.
 
 ## Placeholder Business Info (Replace When Ready)
 These values appear across the site and should be easy to find-and-replace globally:
