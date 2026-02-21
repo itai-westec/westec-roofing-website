@@ -50,6 +50,38 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Service Pages -->
+  <url>
+    <loc>https://www.westecroofing.com/services/shingle-roofing.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westecroofing.com/services/tile-roofing.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westecroofing.com/services/standing-seam-metal-roofing.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westecroofing.com/services/slate-roofing.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.westecroofing.com/services/flat-roof-systems.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blog Pages -->
   <url>
     <loc>https://www.westecroofing.com/blog.html</loc>
