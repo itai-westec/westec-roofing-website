@@ -67,11 +67,17 @@ nav.scrolled .nav-logo img { height: 55px; }
   animation: fadeInDown 0.8s ease;
 }
 .hero h1 {
+  font-family: var(--sans); font-size: 0.95rem;
+  color: rgba(255,255,255,0.85); letter-spacing: 1.5px;
+  text-transform: uppercase; font-weight: 500;
+  margin: 0 0 1rem; animation: fadeInUp 1s ease 0.1s both;
+}
+.hero .hero-tagline {
   font-family: var(--serif); font-size: clamp(2.5rem, 5.5vw, 4.5rem);
   color: var(--white); line-height: 1.1; margin-bottom: 1.5rem;
-  font-weight: 400; animation: fadeInUp 1s ease 0.2s both;
+  max-width: none; font-weight: 400; animation: fadeInUp 1s ease 0.2s both;
 }
-.hero h1 em { font-style: italic; color: var(--accent); }
+.hero .hero-tagline em { font-style: italic; color: var(--accent); }
 .hero p {
   font-size: 1.1rem; color: rgba(255,255,255,0.7); line-height: 1.7;
   margin-bottom: 2.5rem; max-width: 520px; animation: fadeInUp 1s ease 0.4s both;
