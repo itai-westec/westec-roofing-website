@@ -35,6 +35,29 @@ This is the WesTec Roofing website — a premium roofing contractor site serving
 - Max-width containers: 1200px
 - Cards have 1px light-gray borders and accent top-line hover animation
 
+### Responsive Breakpoints (styles.css)
+- **1100px — mobile menu trigger.** At 1100px and below the hamburger shows and
+  `.nav-links` collapses into the absolutely-positioned panel. Above 1100px the full
+  desktop nav renders. This is NOT 768px: the nav has seven items and cannot fit on one
+  line below ~1077px at the current font size, so the panel takes over early.
+  Only the five nav/mobile-menu rules live in this block — every layout, hero, footer and
+  typography rule stays in the 768px blocks.
+- **1101-1300px — mid-range nav spacing**, three steps that keep the nav on one line by
+  tightening spacing only (never font size):
+  - `max-width: 1300px` → `.nav-links` gap `2.5rem` → `1.5rem`
+  - `max-width: 1240px` → gap `1rem`, `.nav-phone`/`.nav-cta` padding `0.7rem 1.1rem`
+  - `max-width: 1160px` → gap `0.6rem`, button padding `0.7rem 0.85rem`
+  All three are guarded with `min-width: 1101px` so they never apply where the hamburger
+  shows. Vertical padding stays `0.7rem` at every step — nav height never changes.
+- **768px** — two blocks holding all non-nav mobile rules (layout, grids, hero, footer,
+  typography) plus `nav { padding: 0.8rem 1.5rem }`.
+- **480px** — two `.about-*` grid rules only.
+- **1440px+** — nav and hero horizontal padding center to a 1400px content column.
+
+Adding a nav item is expensive: each one raises the width the desktop nav needs, and the
+one-line budget is `logo 208.5px + nav padding 96px + item text`. The text-only floor at
+the current font size is already ~947px.
+
 ## Critical Rules
 1. NEVER change colors, fonts, spacing, or visual design unless I explicitly ask
 2. NEVER add a CSS framework (Tailwind, Bootstrap, etc.)
@@ -48,9 +71,14 @@ This is the WesTec Roofing website — a premium roofing contractor site serving
 
 ## Placeholder Business Info (Replace When Ready)
 These values appear across the site and should be easy to find-and-replace globally:
-- Phone: (310) 555-1234 — will be replaced with real number or CallRail tracking number
+- Phone: (323) 250-3883 — LIVE, real number. Markup is `<a href="tel:+13232503883">(323) 250-3883</a>`.
+  Appears 163 times across the site (nav, CTA sections, footers, contact page, schema).
+  If swapping to a CallRail tracking number, find-and-replace both the tel: digits and the display text.
 - Email: info@westecroofing.com — will be replaced with real email
-- License: License #XXXXXXX — will be replaced with real CA contractor license number
+- License: License #1161048 — LIVE, real CSLB number, held by WesTec Roofing LLC.
+  Replaced the earlier #668260 (commit 0e68384). Displayed as `License #1161048` in 52 page
+  footers, and as `"identifier": "CSLB #1161048"` in schema. Privacy policy and terms also
+  spell it out as `CSLB License #1161048`.
 - Address: Los Angeles, CA — will be updated with real office address when available
 - GBP Link: not yet created — add link when Google Business Profile is live
 - Reviews: not yet collected — testimonials section is pre-built with placeholder structure
@@ -105,7 +133,7 @@ This is a local service business website competing in the Los Angeles roofing ma
 - Testimonials/reviews section: pre-built with placeholder structure, ready for real Google reviews
 - Trust badges area: licensed, bonded, insured + manufacturer certifications + Tesla Certified badge
 - Before/after project photos in portfolio (when available)
-- Phone number prominent in nav (already implemented) — ensure clickable tel: link
+- Phone number prominent in nav (implemented) — `.nav-phone` outline button sits before the `.nav-cta` Free Estimate button in `.nav-links` on all 52 pages, clickable tel: link
 - Mobile: consider sticky bottom CTA bar for phone/contact on small screens
 - Contact form should be above the fold on contact.html (already implemented)
 - Every page ends with clear CTA section (already implemented)
