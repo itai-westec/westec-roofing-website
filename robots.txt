@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.westecroofing.com/sitemap.xml
+Sitemap: https://westecroofing.com/sitemap.xml
