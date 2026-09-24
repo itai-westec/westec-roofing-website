@@ -36,6 +36,12 @@ nav.scrolled .nav-logo img { height: 55px; }
   border: none; cursor: pointer; transition: all 0.3s;
 }
 .nav-cta:hover { background: var(--accent-light) !important; transform: translateY(-1px); }
+.nav-phone {
+  background: transparent; color: var(--accent) !important; padding: 0.7rem 1.5rem;
+  font-weight: 700 !important; letter-spacing: 1px !important;
+  border: 1px solid var(--accent); cursor: pointer; transition: all 0.3s;
+}
+.nav-phone:hover { background: var(--accent); color: var(--primary) !important; transform: translateY(-1px); }
 .mobile-menu { display: none; cursor: pointer; }
 .mobile-menu span { display: block; width: 24px; height: 2px; background: white; margin: 5px 0; transition: 0.3s; }
 
@@ -265,8 +271,8 @@ footer {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  nav { padding: 0.8rem 1.5rem; }
+/* Mobile nav panel takes over below 1101px (desktop nav no longer fits) */
+@media (max-width: 1100px) {
   .nav-links { display: none; }
   .nav-links.active {
     display: flex; flex-direction: column;
@@ -281,6 +287,10 @@ footer {
     background: transparent; border: none; padding: 0 0 0 1rem;
   }
   .mobile-menu { display: block; }
+}
+
+@media (max-width: 768px) {
+  nav { padding: 0.8rem 1.5rem; }
   .hero { padding: 7rem 1.5rem 3rem; }
   .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
   .services, .portfolio, .tesla-section, .cta-section, .areas { padding: 4rem 1.5rem; }
@@ -648,4 +658,17 @@ footer {
     padding-left: max(3rem, calc((100vw - 1400px) / 2));
     padding-right: max(3rem, calc((100vw - 1400px) / 2));
   }
+}
+
+/* ===== NAV SPACING: MID-RANGE DESKTOP (1101-1300px) ===== */
+@media (min-width: 1101px) and (max-width: 1300px) {
+  .nav-links { gap: 1.5rem; }
+}
+@media (min-width: 1101px) and (max-width: 1240px) {
+  .nav-links { gap: 1rem; }
+  .nav-phone, .nav-cta { padding: 0.7rem 1.1rem; }
+}
+@media (min-width: 1101px) and (max-width: 1160px) {
+  .nav-links { gap: 0.6rem; }
+  .nav-phone, .nav-cta { padding: 0.7rem 0.85rem; }
 }
