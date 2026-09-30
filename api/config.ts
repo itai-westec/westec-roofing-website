@@ -1,0 +1,2 @@
+import {settings,isLive} from '@/lib/server-env';
+export async function GET(request:Request){const c=settings();const total=Math.max(1,Math.min(10000,Number(c.OFFER_TOTAL)||100));const service=new URL(request.url).searchParams.get('service');const reserved=Math.max(0,Math.min(total,Number((service==='reroof'?c.REROOF_RESERVED:c.REPAIR_RESERVED)??90)||0));return Response.json({live:isLive(c),reserved,total,trackingEnabled:isLive(c)&&c.TRACKING_ENABLED==='true',pixelId:c.META_DATASET_ID},{headers:{'Cache-Control':'no-store'}})}

@@ -1,0 +1,43 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "westec-landing-pages",
+  "main": "worker.ts",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "html_handling": "none"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "westec-leads",
+      "database_id": "1b4702e8-e17e-4053-b01c-05907bbc9936",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "LEADS_MODE": "live",
+    "LAUNCH_APPROVED": "true",
+    "META_DATASET_ID": "2155785675363940",
+    "TRACKING_ENABLED": "true",
+    "REPAIR_RESERVED": "90",
+    "REROOF_RESERVED": "90",
+    "OFFER_TOTAL": "100",
+    "MONDAY_COLUMNS_JSON": "{\"address\":{\"id\":\"text_mm7mg6xh\",\"type\":\"text\"},\"phone\":{\"id\":\"phone_mm7m6z1k\",\"type\":\"phone\"},\"email\":{\"id\":\"email_mm7mq7wa\",\"type\":\"email\"},\"service\":{\"id\":\"dropdown_mm7mpj6w\",\"type\":\"dropdown\"},\"source\":{\"id\":\"color_mm7n3kqq\",\"type\":\"status\"}}",
+    "MONDAY_REPAIR_LABEL": "Roof Repair",
+    "MONDAY_REROOF_LABEL": "Roof Replacement",
+    "MONDAY_SOURCE_LABEL": "Meta"
+  },
+  "workers_dev": true,
+  "routes": [
+    {
+      "pattern": "offers.westecroofing.com",
+      "custom_domain": true
+    }
+  ]
+}
